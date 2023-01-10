@@ -8,6 +8,7 @@ def home():
     return {"key": "hello"}
 
 
-# Press the green button in the gutter to run the script.
-# if __name__ == '__main__':
-#     print_hi('PyCharm')
+@app.get('/{pk}')
+def get_item(pk: int, q: int = None):
+    return {"key": pk, "q": q}
+
